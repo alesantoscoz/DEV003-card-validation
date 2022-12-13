@@ -6,7 +6,42 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header></header>
+    <h1>Validación de tarjeta de crédito</h1>
+    <div class="form">
+    <section class="trj" id="trj">
+      <div class="marca" id="visa">
+        <img src="img/logos/visa.png" alt="">
+      </div>
+      <div class="marca" id="master">
+        <img src="img/logos/mastercard.png" alt="">
+      </div>
+      <img src="img/chip-tarjeta.png" class="chip" alt="">
+      <div class="datos">
+        <div class="grupo" id="numero">
+          <p class="label">Número de tarjeta</p>
+          <input class="num" type="text" id="registro" placeholder="**** **** **** ****" maxlength="16" required=""> 
+        </div>
+        <div class="flexbox">
+          <div class="gurpo" id="nombre">
+            <p class="label">Nombre</p>
+            <input class="nom" type="text" id="registro-nom" required=""> 
+          </div>
+          <div class="grupo" id="expira">
+            <p class ="label">Expiración</p>
+            <p class="exp"><span class="mes">MM</span>/ <span class="year">AA</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+    <form action="" id="formulario" class="form-trj">
+      <div class="flexbox">
+        <div class="expira"></div>
+      </div>
+    </form>
+      
+  
+    <button class="btn" id="val">Validar</button>
     <main></main>
     <footer></footer>
     <script src="index.js" type="module"></script>
