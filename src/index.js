@@ -2,25 +2,47 @@ import validator from './validator.js';
 
 document.getElementById("val").addEventListener("click", validar);
 
+//const inputRegistro = document.getElementById("registro")
+//inputRegistro.addEventListener('blur', (e) => {
+//const input  =  document.getElementById("registro")
+//const number = input.value;
+//const ocult = validator.maskify(number);
+//input.value=ocult
+//})
+
 function validar() {
   const number = document.getElementById("registro").value;
   const ocult = validator.maskify(number);
+  const mrc = number.slice(0, 1);
+
   if (number.length < 16){
     document.getElementById("registro").value=ocult;
     alert("Este número es demasiado corto. Por favor, inserta un número válido.")
-  }
-  if (number.length > 16){
-    document.getElementById("registro").value=ocult;
-    alert("Este número es demasiado largo. Por favor, inserta un número válido.")
+    document.getElementById('validation').style.display = 'flex';
+    document.getElementById('validMark').style.display = 'none';
+    document.getElementById('invalidMark').style.display = 'none';
   }
   if (number.length === 16){
     document.getElementById("registro").value=ocult;
     const resultado = validator.isValid(number);
     if (resultado === false){
-      alert ("Lo siento, el número de tarjeta " + ocult + " no es válido")
+      document.getElementById('validation').style.display = 'none';
+      document.getElementById('validMark').style.display = 'none';
+      document.getElementById('invalidMark').style.display = 'flex';
     }
     if (resultado === true){
-      alert ("El número de tarjeta " + ocult + " es válido. En un momento confirmaremos tu compra.")
+      document.getElementById('validation').style.display = 'none';
+      document.getElementById('invalidMark').style.display = 'none';
+      document.getElementById('validMark').style.display = 'flex';
+    }
+
+    if(mrc == 4){
+      document.getElementById('visa').style.display = 'flex';
+      document.getElementById('master').style.display = 'none';
+    }
+    if(mrc == 5){
+      document.getElementById('visa').style.display = 'none';
+      document.getElementById('master').style.display = 'flex';
     }
   }
 }
