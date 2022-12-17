@@ -29,11 +29,11 @@
 
 * Tarjetas para pruebas
   * master card:
-    5486307820870179 
-    5404137500047114
-    5257273978451377
+    + 5486307820870179 
+    + 5404137500047114
+    + 5257273978451377
   * visa:
-    4280796238993238
-    4280794978959782
-    4280799322321266
-  Todas ellas lograron pasar la prueba de validación. 
+    + 4280796238993238
+    + 4280794978959782
+    + 4280799322321266
+  - Todas ellas lograron pasar la prueba de validación. 
