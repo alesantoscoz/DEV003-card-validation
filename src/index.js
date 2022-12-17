@@ -2,14 +2,6 @@ import validator from './validator.js';
 
 document.getElementById("val").addEventListener("click", validar);
 
-//const inputRegistro = document.getElementById("registro")
-//inputRegistro.addEventListener('blur', (e) => {
-//const input  =  document.getElementById("registro")
-//const number = input.value;
-//const ocult = validator.maskify(number);
-//input.value=ocult
-//})
-
 function validar() {
   const number = document.getElementById("registro").value;
   const ocult = validator.maskify(number);
@@ -22,6 +14,7 @@ function validar() {
     document.getElementById('validMark').style.display = 'none';
     document.getElementById('invalidMark').style.display = 'none';
   }
+
   if (number.length === 16){
     document.getElementById("registro").value=ocult;
     const resultado = validator.isValid(number);
@@ -36,11 +29,11 @@ function validar() {
       document.getElementById('validMark').style.display = 'flex';
     }
 
-    if(mrc == 4){
+    if(mrc === "4"){
       document.getElementById('visa').style.display = 'flex';
       document.getElementById('master').style.display = 'none';
     }
-    if(mrc == 5){
+    if(mrc === "5"){
       document.getElementById('visa').style.display = 'none';
       document.getElementById('master').style.display = 'flex';
     }
