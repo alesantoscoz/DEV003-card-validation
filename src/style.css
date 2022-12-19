@@ -32,16 +32,20 @@ html, body {
  
     .trj{
         width: 100%;
-        max-width: 700px;
+        max-width: 800px;
         padding: 50px;
         border-radius: 15px;
         min-height: 315px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         box-shadow: 0 10px 0 rgba(90, 116, 148, 0.3);
         color: #fffffff6;
-        background: url(/src/img/bg2.jpg)
+        background: url(./img/bg2.jpg)
+    }
+
+    .marca{
+        display: flex;
+        justify-content: flex-end;
     }
 
     #visa{
@@ -52,6 +56,7 @@ html, body {
         object-fit: cover;
         max-width: 140px;
         display: flex;  
+        justify-content: flex-end;
     }
 
     #master{
@@ -61,7 +66,8 @@ html, body {
         height: 100%;
         object-fit: cover;
         max-width: 140px;    
-        display:none;   
+        display:none;  
+        justify-content: flex-end;
     }
 
     .trj .chip{
@@ -71,43 +77,53 @@ html, body {
     }
 
     .label{
-        font-size: 23px;
+        font-size: 40px;
         color: #f3f1c8cb;
         margin-bottom: 5px;
     }
 
     .num{ 
         color: #fff;
-        font-size: 30px;
+        font-size: 45px;
         text-transform: uppercase;
         border: none;
         background: rgba(255, 255, 255, 0.279);
         border-radius: 5%;
     }
 
+    .mark{
+    display: flex;  
+    justify-content: flex-end;
+    }
+
     #validation{
         display: flex;
         width: 100%;
         max-width: 90px;
-        margin-bottom: 20px;
-        
+        margin-bottom: 20px;  
+        justify-content: flex-end; 
     }
+
     #validMark{
         display: none;
         width: 100%;
         max-width: 90px;
         margin-bottom: 20px;
+        justify-content: flex-end;
     }
+
     #invalidMark{
         display: none;
         width: 100%;
         max-width: 90px;
         margin-bottom: 20px;
+        justify-content: flex-end;
     }
+
     .btn {
         width: 200px;
         height: 100px;
-        margin:50px;
+        margin: auto;
         font-size: 30px;
         line-height: 20px;
         background: #8a71f7;
